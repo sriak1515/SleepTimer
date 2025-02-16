@@ -29,6 +29,7 @@ jobs:
       with:
         name: SleepTimer.apk
         path: app/build/outputs/apk/release/app-release-unsigned.apk
+        compression-level: 0
     - name: Upload UnitTest reports
       uses: actions/upload-artifact@v4
       with:
