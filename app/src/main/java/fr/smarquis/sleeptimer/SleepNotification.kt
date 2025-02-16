@@ -23,9 +23,9 @@ import java.util.concurrent.TimeUnit.MINUTES
 
 object SleepNotification {
 
-    private val TIMEOUT_INITIAL_MILLIS = MINUTES.toMillis(30)
-    private val TIMEOUT_INCREMENT_MILLIS = MINUTES.toMillis(10)
-    private val TIMEOUT_DECREMENT_MILLIS = MINUTES.toMillis(10)
+    private val TIMEOUT_INITIAL_MILLIS = MINUTES.toMillis(10)
+    private val TIMEOUT_INCREMENT_MILLIS = MINUTES.toMillis(2)
+    private val TIMEOUT_DECREMENT_MILLIS = MINUTES.toMillis(2)
 
     private enum class Action(private val value: String) {
         CANCEL("fr.smarquis.sleeptimer.action.CANCEL") {
