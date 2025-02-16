@@ -23,13 +23,11 @@ jobs:
         validate-wrappers: true
         gradle-home-cache-cleanup: true
     - run: ./gradlew assembleDebug test lint --stacktrace
-    - run: ./gradlew assembleRelease
     - name: Upload APK
       uses: actions/upload-artifact@v4
       with:
-        name: SleepTimer.apk
-        path: app/build/outputs/apk/release/app-release-unsigned.apk
-        compression-level: 0
+        name: app-debug.apk
+        path: app/build/outputs/apk/debug/app-debug.apk
     - name: Upload UnitTest reports
       uses: actions/upload-artifact@v4
       with:
